@@ -2,3 +2,4 @@ init
 init2
 init3
 init8
+test

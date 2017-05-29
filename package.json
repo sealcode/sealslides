@@ -1,0 +1,46 @@
+{
+  "name": "random-slides",
+  "version": "0.1.0",
+  "description": "The customisable app that creates presentations with random content",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --require babel-register",
+    "build": "browserify -t [ babelify ] app/index.js -o app/public/js/bundle.js",
+    "dev": "budo -v app/index.js:js/bundle.js -d app/public -- -t [ babelify ]"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sealcode/sealslides.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sealcode/sealslides/issues"
+  },
+  "homepage": "https://github.com/sealcode/sealslides#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.24.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "budo": "^9.4.7",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
+    "mocha": "^3.2.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
